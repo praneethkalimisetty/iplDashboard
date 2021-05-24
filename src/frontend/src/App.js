@@ -1,7 +1,9 @@
+import "./App.scss";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { TeamPage } from "./pages/TeamPage";
 import { MatchPage } from "./pages/MatchPage";
-import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HomePage } from "./pages/HomePage";
+
 function App() {
   return (
     <div className="App">
@@ -11,7 +13,10 @@ function App() {
             <MatchPage />
           </Route>
           <Route path="/teams/:teamName">
-            <TeamPage>IPL Dashboard</TeamPage>
+            <TeamPage />
+          </Route>
+          <Route path="/">
+            <HomePage />
           </Route>
         </Switch>
       </Router>
